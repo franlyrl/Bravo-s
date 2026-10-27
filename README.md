@@ -1,16 +1,23 @@
-# Mi Web
+# Bravo's
 
 Next.js 15 (App Router) + TypeScript + Tailwind CSS v4 + Drizzle ORM + [Neon](https://neon.tech) (Postgres serverless).
 
-La página de inicio es un ejemplo funcional: guarda, lista y elimina mensajes en la tabla `messages` usando Server Actions.
+Página de un hostal con servicios: portada, servicios, habitaciones, sección "Nosotros" y un formulario de reservas que guarda las solicitudes en la tabla `reservations` de Neon (Server Action).
+
+**Para cambiar textos, servicios, habitaciones, precios y datos de contacto, edita `src/content/hostal.ts`.**
 
 ## Estructura
 
 ```
 src/
   app/
-    page.tsx       # Página principal (lee de la base de datos)
-    actions.ts     # Server Actions (insertar / eliminar)
+    page.tsx       # Página principal del hostal
+    actions.ts     # Server Action: guardar reservas
+  components/
+    reservation-form.tsx  # Formulario de reservas
+    icon.tsx       # Íconos (lucide-react)
+  content/
+    hostal.ts      # Textos, servicios, habitaciones y contacto
   db/
     schema.ts      # Tablas (Drizzle)
     index.ts       # Conexión a Neon (driver HTTP serverless)

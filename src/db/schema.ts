@@ -1,10 +1,17 @@
-import { pgTable, serial, text, timestamp } from "drizzle-orm/pg-core";
+import { date, integer, pgTable, serial, text, timestamp } from "drizzle-orm/pg-core";
 
-export const messages = pgTable("messages", {
+export const reservations = pgTable("reservations", {
   id: serial("id").primaryKey(),
-  content: text("content").notNull(),
+  name: text("name").notNull(),
+  email: text("email").notNull(),
+  phone: text("phone"),
+  roomType: text("room_type").notNull(),
+  checkIn: date("check_in").notNull(),
+  checkOut: date("check_out").notNull(),
+  guests: integer("guests").notNull(),
+  notes: text("notes"),
   createdAt: timestamp("created_at", { withTimezone: true }).defaultNow().notNull(),
 });
 
-export type Message = typeof messages.$inferSelect;
-export type NewMessage = typeof messages.$inferInsert;
+export type Reservation = typeof reservations.$inferSelect;
+export type NewReservation = typeof reservations.$inferInsert;
