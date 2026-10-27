@@ -13,7 +13,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Mi Web",
+  title: "Bravo's",
   description: "Next.js + Tailwind + Drizzle + Neon",
 };
 

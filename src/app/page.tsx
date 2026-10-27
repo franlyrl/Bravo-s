@@ -22,7 +22,7 @@ export default async function Home() {
   return (
     <main className="mx-auto flex min-h-screen max-w-2xl flex-col gap-8 px-6 py-16">
       <header className="space-y-2">
-        <h1 className="text-4xl font-bold tracking-tight">Mi Web</h1>
+        <h1 className="text-4xl font-bold tracking-tight">Bravo&apos;s</h1>
         <p className="text-gray-500">Next.js + TypeScript + Tailwind + Drizzle + Neon (Postgres)</p>
       </header>
 
